@@ -200,6 +200,8 @@ body {
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
     transition: background 0.2s;
     position: relative;
     overflow: hidden;

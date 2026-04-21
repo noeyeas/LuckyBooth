@@ -42,8 +42,7 @@ function saveRanking(ranking) {
 // ===== 이벤트 =====
 btnStart.addEventListener('click', startGame);
 btnRetry.addEventListener('click', retryGame);
-reactionArea.addEventListener('click', handleReactionClick);
-reactionArea.addEventListener('touchstart', (e) => {
+reactionArea.addEventListener('pointerdown', (e) => {
     e.preventDefault();
     handleReactionClick();
 });
