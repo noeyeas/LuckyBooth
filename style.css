@@ -205,6 +205,10 @@ body {
     transition: background 0.2s;
     position: relative;
     overflow: hidden;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    padding: 0;
 }
 
 .reaction-area.state-idle {

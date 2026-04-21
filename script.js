@@ -42,10 +42,7 @@ function saveRanking(ranking) {
 // ===== 이벤트 =====
 btnStart.addEventListener('click', startGame);
 btnRetry.addEventListener('click', retryGame);
-reactionArea.addEventListener('pointerdown', (e) => {
-    e.preventDefault();
-    handleReactionClick();
-});
+reactionArea.addEventListener('click', handleReactionClick);
 playerNameInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') startGame();
 });
@@ -85,7 +82,7 @@ function setIdle() {
     reactionArea.className = 'reaction-area state-idle';
     reactionMessage.classList.remove('hidden');
     reactionClover.classList.add('hidden');
-    reactionMessage.textContent = '클릭하면 시작합니다';
+    reactionMessage.textContent = '터치하면 시작합니다';
 }
 
 function setWaiting() {
