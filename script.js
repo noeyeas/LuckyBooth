@@ -45,6 +45,10 @@ btnStart.addEventListener('click', startGame);
 btnRetry.addEventListener('click', retryGame);
 btnResetRanking.addEventListener('click', resetRanking);
 reactionArea.addEventListener('click', handleReactionClick);
+reactionArea.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    handleReactionClick();
+});
 playerNameInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') startGame();
 });
