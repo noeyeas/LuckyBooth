@@ -13,7 +13,6 @@ const roundResults = document.getElementById('round-results');
 const resultDetail = document.getElementById('result-detail');
 const resultAvg = document.getElementById('result-avg');
 const btnRetry = document.getElementById('btn-retry');
-const btnResetRanking = document.getElementById('btn-reset-ranking');
 const rankingBody = document.getElementById('ranking-body');
 
 // ===== 게임 설정 =====
@@ -43,7 +42,6 @@ function saveRanking(ranking) {
 // ===== 이벤트 =====
 btnStart.addEventListener('click', startGame);
 btnRetry.addEventListener('click', retryGame);
-btnResetRanking.addEventListener('click', resetRanking);
 reactionArea.addEventListener('click', handleReactionClick);
 reactionArea.addEventListener('touchstart', (e) => {
     e.preventDefault();
