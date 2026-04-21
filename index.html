@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>행운 상점 - 자연과학대학 x 인공지능융합대학</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="hero">
+        <div class="hero-content">
+            <p class="hero-tag">자연과학대학 x 인공지능융합대학 연합 부스</p>
+            <h1 class="hero-title">&#x1F340; 행운 상점</h1>
+            <p class="hero-desc">행운의 네잎클로버가 나타나는 순간을 잡아라!</p>
+        </div>
+    </header>
+
+    <!-- 부스 정보 -->
+    <section class="info-section">
+        <div class="info-cards">
+            <div class="info-card">
+                <div class="info-icon">&#x1F3AA;</div>
+                <h3>부스 소개</h3>
+                <p>자연과학대학과 인공지능융합대학이 함께 준비한 행운 상점! 다양한 행운 아이템과 미니게임이 여러분을 기다립니다.</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">&#x1F3AE;</div>
+                <h3>게임 방법</h3>
+                <p>화면을 주시하다가 네잎클로버가 나타나면 최대한 빠르게 클릭! 반응속도가 곧 실력입니다.</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">&#x1F381;</div>
+                <h3>경품 안내</h3>
+                <p>상위 랭킹에 들면 특별한 행운 경품을 드립니다! 지금 바로 도전해보세요.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 게임 섹션 -->
+    <section class="game-section" id="game-section">
+        <h2 class="section-title">&#x26A1; 행운 반응속도 테스트</h2>
+        <p class="section-desc">네잎클로버가 나타나는 순간, 최대한 빠르게 클릭하세요!</p>
+
+        <!-- 이름 입력 -->
+        <div class="name-input-area" id="name-input-area">
+            <input type="text" id="player-name" placeholder="이름을 입력하세요" maxlength="10">
+            <button class="btn-start" id="btn-start">게임 시작</button>
+        </div>
+
+        <!-- 게임 영역 -->
+        <div class="game-box hidden" id="game-box">
+            <div class="game-status" id="game-status">
+                <span id="display-name">플레이어</span> · <span id="round-display">1</span> / 3 라운드
+            </div>
+
+            <div class="reaction-area" id="reaction-area">
+                <div class="reaction-message" id="reaction-message">
+                    클릭하면 시작합니다
+                </div>
+                <div class="reaction-clover hidden" id="reaction-clover">&#x1F340;</div>
+            </div>
+
+            <div class="round-results" id="round-results"></div>
+        </div>
+
+        <!-- 최종 결과 -->
+        <div class="game-result hidden" id="game-result">
+            <div class="result-box">
+                <div class="result-icon">&#x1F389;</div>
+                <h3>테스트 완료!</h3>
+                <p class="result-detail" id="result-detail"></p>
+                <p class="result-time">평균 반응속도: <strong id="result-avg">0</strong> ms</p>
+                <button class="btn-retry" id="btn-retry">다시 도전하기</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 실시간 순위 -->
+    <section class="ranking-section" id="ranking-section">
+        <h2 class="section-title">&#x1F3C6; 실시간 순위</h2>
+        <div class="ranking-table-wrap">
+            <table class="ranking-table">
+                <thead>
+                    <tr>
+                        <th>순위</th>
+                        <th>이름</th>
+                        <th>평균 반응속도</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-body">
+                    <tr>
+                        <td colspan="3" class="empty-ranking">아직 기록이 없습니다. 첫 번째 도전자가 되어보세요!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button class="btn-reset-ranking" id="btn-reset-ranking">순위 초기화</button>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <p>자연과학대학 x 인공지능융합대학 연합 부스 | 행운 상점</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
