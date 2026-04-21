@@ -40,9 +40,6 @@ function saveRanking(ranking) {
 }
 
 // ===== 이벤트 =====
-btnStart.addEventListener('click', startGame);
-btnRetry.addEventListener('click', retryGame);
-reactionArea.addEventListener('click', handleReactionClick);
 playerNameInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') startGame();
 });

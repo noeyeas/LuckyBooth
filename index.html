@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
     <title>인연: 행운상점 - 자연과학대학 x 인공지능융합대학</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -50,7 +52,7 @@
         <!-- 이름 입력 -->
         <div class="name-input-area" id="name-input-area">
             <input type="text" id="player-name" placeholder="이름을 입력하세요" maxlength="10">
-            <button class="btn-start" id="btn-start">게임 시작</button>
+            <button class="btn-start" id="btn-start" onclick="startGame()">게임 시작</button>
         </div>
 
         <!-- 게임 영역 -->
@@ -59,11 +61,9 @@
                 <span id="display-name">플레이어</span> · <span id="round-display">1</span> / 3 라운드
             </div>
 
-            <button type="button" class="reaction-area" id="reaction-area">
-                <div class="reaction-message" id="reaction-message">
-                    터치하면 시작합니다
-                </div>
-                <div class="reaction-clover hidden" id="reaction-clover">&#x1F340;</div>
+            <button type="button" class="reaction-area" id="reaction-area" onclick="handleReactionClick()">
+                <span class="reaction-message" id="reaction-message">터치하면 시작합니다</span>
+                <span class="reaction-clover hidden" id="reaction-clover">&#x1F340;</span>
             </button>
 
             <div class="round-results" id="round-results"></div>
@@ -76,7 +76,7 @@
                 <h3>테스트 완료!</h3>
                 <p class="result-detail" id="result-detail"></p>
                 <p class="result-time">평균 반응속도: <strong id="result-avg">0</strong> ms</p>
-                <button class="btn-retry" id="btn-retry">다시 도전하기</button>
+                <button class="btn-retry" id="btn-retry" onclick="retryGame()">다시 도전하기</button>
             </div>
         </div>
     </section>
