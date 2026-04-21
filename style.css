@@ -7,15 +7,15 @@
 
 body {
     font-family: 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-    background: #f0fdf4;
-    color: #1a1a1a;
+    background: #fffef5;
+    color: #333;
     line-height: 1.6;
 }
 
 /* ===== Hero Section ===== */
 .hero {
-    background: linear-gradient(135deg, #166534, #15803d, #22c55e);
-    color: white;
+    background: linear-gradient(135deg, #a7f3d0, #6ee7b7, #fde68a);
+    color: #1a3a2a;
     text-align: center;
     padding: 80px 20px 60px;
     position: relative;
@@ -29,7 +29,7 @@ body {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+    background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 60%);
     animation: shimmer 8s ease-in-out infinite;
 }
 
@@ -45,25 +45,27 @@ body {
 
 .hero-tag {
     display: inline-block;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.6);
     backdrop-filter: blur(4px);
     padding: 6px 20px;
     border-radius: 20px;
     font-size: 14px;
     margin-bottom: 20px;
     letter-spacing: 1px;
+    color: #166534;
+    font-weight: 600;
 }
 
 .hero-title {
     font-size: 52px;
     font-weight: 800;
     margin-bottom: 16px;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    color: #15803d;
 }
 
 .hero-desc {
     font-size: 18px;
-    opacity: 0.9;
+    color: #2d6a4f;
     max-width: 500px;
     margin: 0 auto;
 }
@@ -86,12 +88,14 @@ body {
     border-radius: 16px;
     padding: 32px 24px;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    border: 2px solid #ecfdf5;
     transition: transform 0.2s;
 }
 
 .info-card:hover {
     transform: translateY(-4px);
+    border-color: #a7f3d0;
 }
 
 .info-icon {
@@ -101,13 +105,13 @@ body {
 
 .info-card h3 {
     font-size: 18px;
-    color: #166534;
+    color: #15803d;
     margin-bottom: 10px;
 }
 
 .info-card p {
     font-size: 14px;
-    color: #555;
+    color: #666;
 }
 
 /* ===== Section Common ===== */
@@ -115,13 +119,13 @@ body {
     text-align: center;
     font-size: 28px;
     font-weight: 700;
-    color: #166534;
+    color: #15803d;
     margin-bottom: 8px;
 }
 
 .section-desc {
     text-align: center;
-    color: #666;
+    color: #777;
     margin-bottom: 32px;
 }
 
@@ -147,23 +151,24 @@ body {
 #player-name {
     padding: 14px 20px;
     font-size: 16px;
-    border: 2px solid #bbf7d0;
+    border: 2px solid #d1fae5;
     border-radius: 12px;
     outline: none;
     width: 220px;
+    background: white;
     transition: border-color 0.2s;
 }
 
 #player-name:focus {
-    border-color: #22c55e;
+    border-color: #34d399;
 }
 
 .btn-start {
     padding: 14px 36px;
     font-size: 16px;
     font-weight: 700;
-    background: linear-gradient(135deg, #22c55e, #16a34a);
-    color: white;
+    background: linear-gradient(135deg, #34d399, #6ee7b7);
+    color: #065f46;
     border: none;
     border-radius: 12px;
     cursor: pointer;
@@ -172,14 +177,14 @@ body {
 
 .btn-start:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 16px rgba(34,197,94,0.4);
+    box-shadow: 0 4px 16px rgba(110,231,183,0.5);
 }
 
 /* 게임 상태 바 */
 .game-status {
     text-align: center;
     font-weight: 600;
-    color: #166534;
+    color: #15803d;
     margin-bottom: 20px;
     font-size: 16px;
 }
@@ -201,31 +206,35 @@ body {
 }
 
 .reaction-area.state-idle {
-    background: #e2e8f0;
+    background: #f1f5f9;
+    border: 3px dashed #cbd5e1;
 }
 
 .reaction-area.state-waiting {
-    background: #fca5a5;
+    background: #fecaca;
+    border: 3px solid #fca5a5;
 }
 
 .reaction-area.state-ready {
-    background: #4ade80;
+    background: #bbf7d0;
+    border: 3px solid #86efac;
 }
 
 .reaction-area.state-result {
-    background: #bfdbfe;
+    background: #dbeafe;
+    border: 3px solid #93c5fd;
 }
 
 .reaction-area.state-early {
-    background: #fbbf24;
+    background: #fef08a;
+    border: 3px solid #fde047;
 }
 
 .reaction-message {
     font-size: 22px;
     font-weight: 700;
-    color: white;
+    color: #333;
     text-align: center;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.15);
     padding: 20px;
     line-height: 1.5;
 }
@@ -259,22 +268,23 @@ body {
     font-size: 14px;
     font-weight: 600;
     background: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .round-badge.done {
-    color: #166534;
-    border: 2px solid #86efac;
+    color: #065f46;
+    border: 2px solid #6ee7b7;
+    background: #ecfdf5;
 }
 
 .round-badge.current {
-    color: #b45309;
+    color: #92400e;
     border: 2px solid #fbbf24;
-    background: #fef9c3;
+    background: #fffbeb;
 }
 
 .round-badge.pending {
-    color: #aaa;
+    color: #bbb;
     border: 2px solid #e5e7eb;
 }
 
@@ -287,7 +297,8 @@ body {
     background: white;
     border-radius: 20px;
     padding: 48px 32px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    border: 2px solid #d1fae5;
 }
 
 .result-icon {
@@ -297,33 +308,33 @@ body {
 
 .result-box h3 {
     font-size: 24px;
-    color: #166534;
+    color: #15803d;
     margin-bottom: 16px;
 }
 
 .result-detail {
     font-size: 15px;
-    color: #555;
+    color: #666;
     margin-bottom: 8px;
 }
 
 .result-time {
     font-size: 18px;
-    color: #444;
+    color: #555;
     margin-bottom: 28px;
 }
 
 .result-time strong {
     font-size: 36px;
-    color: #dc2626;
+    color: #e11d48;
 }
 
 .btn-retry {
     padding: 14px 40px;
     font-size: 16px;
     font-weight: 700;
-    background: linear-gradient(135deg, #22c55e, #16a34a);
-    color: white;
+    background: linear-gradient(135deg, #34d399, #6ee7b7);
+    color: #065f46;
     border: none;
     border-radius: 12px;
     cursor: pointer;
@@ -345,8 +356,9 @@ body {
     background: white;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     margin-top: 24px;
+    border: 2px solid #ecfdf5;
 }
 
 .ranking-table {
@@ -355,14 +367,14 @@ body {
 }
 
 .ranking-table thead {
-    background: #166534;
-    color: white;
+    background: linear-gradient(135deg, #a7f3d0, #6ee7b7);
+    color: #065f46;
 }
 
 .ranking-table th {
     padding: 14px 16px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.5px;
 }
 
@@ -382,7 +394,7 @@ body {
 }
 
 .empty-ranking {
-    color: #aaa;
+    color: #bbb;
     font-style: italic;
     padding: 32px 16px !important;
 }
@@ -402,12 +414,12 @@ body {
     margin: 20px auto 0;
     padding: 10px 24px;
     font-size: 13px;
-    background: #ef4444;
+    background: #f87171;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    opacity: 0.7;
+    opacity: 0.6;
     transition: opacity 0.2s;
 }
 
@@ -419,9 +431,10 @@ body {
 .footer {
     text-align: center;
     padding: 24px 20px;
-    background: #166534;
-    color: rgba(255,255,255,0.7);
+    background: linear-gradient(135deg, #a7f3d0, #6ee7b7);
+    color: #065f46;
     font-size: 13px;
+    font-weight: 500;
 }
 
 /* ===== Responsive ===== */
